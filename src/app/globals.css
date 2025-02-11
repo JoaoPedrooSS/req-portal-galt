@@ -1,0 +1,29 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@font-face {
+  font-family: 'Museo W01 700';
+  src: url('/fonts/museo-w01-700.woff2') format('woff2'),
+       url('/fonts/museo-w01-700.woff') format('woff');
+  font-weight: 700;
+  font-style: normal;
+}
+
+:root {
+  --background: #ffffff;
+  --foreground: #ffffff;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --background: #ededed;
+    --foreground: #ededed;
+  }
+}
+
+body {
+  color: var(--foreground);
+  background: var(--background);
+  font-family: Museo W01 700, Arial, Helvetica, sans-serif;
+}
