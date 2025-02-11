@@ -7,10 +7,11 @@ import { useRouter, useSearchParams } from "next/navigation";
 import Header from "@/components/header";
 
 export default function EditarAluno() {
-  const searchParams = useSearchParams();
-  const nomeURL = searchParams.get("nome") || "";
-  const emailURL = searchParams.get("email") || "";
-  const periodoURL = searchParams.get("periodo") || "";
+    useEffect(() => {
+    setUsername(searchParams.get("nome") || "");
+    setEmail(searchParams.get("email") || "");
+    setPeriodo(searchParams.get("periodo") || "");
+  }, [searchParams]);
 
   const [username, setUsername] = useState(nomeURL);
   const [email, setEmail] = useState(emailURL);
